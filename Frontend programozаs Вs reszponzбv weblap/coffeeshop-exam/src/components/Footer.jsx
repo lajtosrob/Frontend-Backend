@@ -11,7 +11,7 @@ import instagram from '../assets/icons/instagram.svg'
 
 const Footer = () => {
   return (
-    <footer className='container'>
+    <footer className='container-fluid'>
             <div className='logo-holder'>
                 <CoffeeBean fill={"#0D8582"} width={"32px"}/>
                 coffeeroasters

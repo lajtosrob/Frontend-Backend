@@ -5,6 +5,7 @@ const HowItWorks = () => {
   return (
     <div className='howItWorksWrapper'>
       <h2>How it works?</h2><br />
+      <div className='my-grid'> 
       <div>
         <h1>01</h1>
         <h2>Pick your coffee</h2>
@@ -19,6 +20,7 @@ const HowItWorks = () => {
         <h1>03</h1>
         <h2>Receive and enjoy!</h2>
         <p>We ship your package within 48 hours, frechly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
+      </div>
       </div>
     </div>
   )

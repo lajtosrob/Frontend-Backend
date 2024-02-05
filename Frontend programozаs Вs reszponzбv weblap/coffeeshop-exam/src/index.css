@@ -35,3 +35,70 @@ h1, h2, h3, h4, h5 {
 .main{
   padding-top: 90px;
 }
+
+.howItWorksWrapper {
+  width: 1000px;
+  margin: auto;
+}
+
+.my-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .my-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer  {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+footer a {
+  color:steelblue;
+  text-decoration: none;
+}
+
+footer .social img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+footer .logo-holder {
+  color: white;
+  margin-left: 50px;
+}
+
+footer .link-holder {
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+}
+
+footer .social {
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+  footer div {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+  footer .link-holder {
+    margin: auto;
+  }
+  footer .logo-holder {
+    margin: 0;
+    
+  }
+}
