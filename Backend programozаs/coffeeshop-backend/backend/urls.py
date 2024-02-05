@@ -20,5 +20,6 @@ from coffeeroaster import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/tags/', views.getAllTags)
+    path('api/tags/', views.getAllTags),
+    path('api/coffees/', views.getAllCoffees),
 ]
