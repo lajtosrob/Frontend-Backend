@@ -1,0 +1,139 @@
+1. How it works rács módosítása: 
+
+- Bootsrappel: 
+
+HowItWorks.jsx-ben: 
+
+className='howItWorkWrapper' + container class
+
+új div: className='row'
+
+belső diveken: className="col-md-4"
+
+- CSS griddel: 
+
+új div -> className='my-grid'
+
+index.css-ben:
+
+.howItWorksWrapper {
+	max-width: 1200px;
+	margin: auto;
+	padding: 20px;
+}
+
+.my-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+	.my-grid{
+		grid-template-columns: 1fr;
+	}
+}
+
+3. Footer.css módosítása + 4. Reszponzivitás rendben. 
+
+index.css-ben
+
+footer{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
+}
+
+footer .link-holder {
+	display: flex;
+	gap: 20px;
+}
+
+/* (v1) footer .social{
+	display: flex;
+	gap: 20px;
+} */
+
+footer .social img {
+	width: 20px;
+	(v1) margin-left: 20px;
+}
+
+8. Footer.jsx-ben footer teljes szélességben: 
+
+footer className='container-fluid'
+
+CoffeeCard.jsx létrehozása
+
+-> rafce
+
+9. coffee-card class hozzáadása a CoffeeCard-hoz divhez -> className='coffee-card'
+
+10. CoffeeCard.css létrehozása. -> CoffeeCard.css
+CoffeeCard.css beimportálása a CoffeeCard.jsx-be -> import './css/CoffeeCard.css'
+
+16. A name érték megjelenítése h2 tagen belül. -> <h2>Példa</h2>
+
+17. A description érték megjelenítése egy <p> tagen belül. -> <p>Lorem ipsum</p>
+
+18. A amount_in_grams érték megjelenítése egy <div> tagen belül. -> <div>200g</div>
+
+19. A price érték megjelenítése egy <h3> tagen belül. -> <h3>2500Ft</h3>
+
+12. CoffeeCard importálása a Coffees.jsx-be -> import CoffeeCard from '../components/CoffeeCard'
+
+15. Effect létrehozása
+
+API végpont fetch-elése -> Coffees.jsx: (let heroText = ... után)
+
+let ENDPOINT = "http://127.0.0.1.8000/api/coffees/"
+
+(import React {useEffect, useState} from 'react') -> useEffect beimportálása
+
+useEffect(()=>{
+
+	fetch(ENDPOINT)
+	.then(res=>res.json())
+	.then(data=> {
+		setCoffees(coffees)
+})
+
+},[])
+
+
+13. state létrehozása és inicializálása (let heroText = ... után)
+
+const [coffees, setCoffees ] = useState([])
+
+14. Adatok mappelése: Coffees.jsx TODO... után
+
+{ coffees.map(coffee => <CoffeeCard data={data}/>)}
+
+
+Coffee adatok átadása: 
+
+const CoffeeCard = (props) => {
+
+return (
+	<div className='coffee-card'>
+		<h2>{props.data.name}/h2>
+		<p>{props.data.description}</p>
+		<div>{props.data.amount_in_grams}</div>
+		<h3>{props.data.price}</h3>
+	<div>
+	)
+}
+
+
+
+
+
+
+
+
